@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.AccountSettingActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/small_to_normal"
+        android:background="@color/light_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_real_name_account_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_to_normal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_real_name_title_account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/real_name_title"
+            android:textAppearance="@style/TextNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_real_name_account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_first_name"
+            android:textAppearance="@style/TextNormal"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_real_name_title_account_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_real_name_title_account_setting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_email_account_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_to_normal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_email_title_account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_title"
+            android:textAppearance="@style/TextNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_email_account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/very_small"
+            android:text="@string/email_hide"
+            android:textAppearance="@style/TextNormal"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/tv_email_title_account_setting"
+            app:layout_constraintEnd_toStartOf="@id/ic_arrow_email_account_setting"
+            app:layout_constraintTop_toTopOf="@id/tv_email_title_account_setting" />
+
+        <ImageView
+            android:id="@+id/ic_arrow_email_account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_email_account_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_email_account_setting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_change_password_account_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_to_normal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_change_password_title_account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_password_title"
+            android:textAppearance="@style/TextNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="@id/tv_change_password_title_account_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_change_password_title_account_setting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_delete_account_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_to_normal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_delete_account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_account_title"
+            android:textColor="@color/red"
+            android:textAppearance="@style/TextNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+</LinearLayout>

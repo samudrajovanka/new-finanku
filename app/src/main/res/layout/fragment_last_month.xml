@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/very_small_to_small"
+    tools:context=".ui.LastMonthFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_last_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_to_normal"
+        android:text="@string/title_last_month"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextThirdTitle"
+        android:textColor="@color/blue"
+        android:visibility="gone"
+        app:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/grid_statistic_last_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_to_normal"
+        android:numColumns="2"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_last_month"
+        tools:listitem="@layout/item_card_statistic" />
+
+    <ImageView
+        android:id="@+id/iv_no_data_last_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="150dp"
+        android:src="@drawable/ic_no_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

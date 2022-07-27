@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mobprog.finanku">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinanKu"
+        tools:targetApi="m">
+        <activity
+            android:name=".ui.MonthlyLimitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PasswordSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.EmailSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AccountSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SetLimitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/splashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

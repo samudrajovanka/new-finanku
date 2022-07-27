@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.AccountFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        android:gravity="center">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_name_toolbar_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/small_to_normal"
+            android:paddingEnd="@dimen/small_to_normal"
+            android:text="@string/full_name"
+            android:textAppearance="@style/TextTitle"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/small_to_normal"
+        android:background="@color/light_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_account_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_to_normal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_setting_title"
+            android:textAppearance="@style/TextNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="@id/tv_account_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_account_setting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_monthly_limit_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_to_normal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_monthly_limit_title_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monthly_limit_title"
+            android:textAppearance="@style/TextNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_monthly_limit_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/very_small"
+            android:text="@string/dummy_limit"
+            android:textAppearance="@style/TextNormal"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/tv_monthly_limit_title_account"
+            app:layout_constraintEnd_toStartOf="@id/ic_arrow_monthly_limit_setting"
+            app:layout_constraintTop_toTopOf="@id/tv_monthly_limit_title_account" />
+
+        <ImageView
+            android:id="@+id/ic_arrow_monthly_limit_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_email_account_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_email_account_setting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_app_version_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_to_normal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_app_version_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_version_title"
+            android:textAppearance="@style/TextNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_app_version_setting_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/very_small"
+            android:text="@string/app_version"
+            android:textAppearance="@style/TextNormal"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/tv_app_version_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_app_version_setting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_logout_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_to_normal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_logout_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:textAppearance="@style/TextNormal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+
+</LinearLayout>

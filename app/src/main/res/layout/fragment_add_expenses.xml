@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/small_to_normal"
+    tools:context=".ui.AddExpensesFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_expenses_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_expenses_money_title"
+        android:textAppearance="@style/TextTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_description_expenses_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/very_small"
+        android:text="@string/enter_expense_money_description"
+        android:textAppearance="@style/TextSubtitle"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_expenses_money" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_set_category_type_expense_money"
+        style="@style/DropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large"
+        android:hint="@string/category_type_hint"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_expenses_money">
+
+        <AutoCompleteTextView
+            android:id="@+id/menu_dropdown_type_expense_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_set_description_type_expense_money"
+        style="@style/EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_to_normal"
+        android:hint="@string/short_description_hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:layout_constraintTop_toBottomOf="@id/til_set_category_type_expense_money">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_set_description_type_expense_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLength="50"
+            android:maxLines="5"
+            android:scrollbars="vertical" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_set_amount_money_expense_money"
+        style="@style/EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_to_normal"
+        android:hint="@string/enter_amount_of_money_hint"
+        app:layout_constraintTop_toBottomOf="@id/til_set_description_type_expense_money"
+        app:prefixText="@string/rp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_set_amount_money_expense_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_input_expense_money"
+        style="@style/ButtonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_to_huge"
+        android:text="@string/input"
+        app:layout_constraintTop_toBottomOf="@id/til_set_amount_money_expense_money" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

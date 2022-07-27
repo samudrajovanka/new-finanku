@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/small_to_normal">
+
+    <ImageView
+        android:id="@+id/iv_icon_item_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/icon_item_history"
+        android:src="@drawable/ic_food"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_date_item_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/very_small_to_small"
+        android:text="@string/dummy_date"
+        android:textAppearance="@style/TextSmall"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_item_history"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_desc_item_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/very_small_to_small"
+        android:text="@string/description_history_item"
+        android:textAppearance="@style/TextNormal"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_item_history"
+        app:layout_constraintTop_toBottomOf="@id/tv_date_item_history" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_amount_item_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_currency"
+        android:textAppearance="@style/TextNormal"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="@id/tv_desc_item_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_date_item_history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
