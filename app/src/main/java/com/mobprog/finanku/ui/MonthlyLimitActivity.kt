@@ -1,7 +1,6 @@
 package com.mobprog.finanku.ui
 
 import android.content.ContentValues
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -72,7 +71,7 @@ class MonthlyLimitActivity : AppCompatActivity(), View.OnClickListener, DialogAl
             }
 
             totalLimit = limitFood + limitShop + limitTravel + limitOthers
-            tv_total_monthly_limit.text = totalLimit?.toCurrencyIDR()
+            tv_total_monthly_limit.text = totalLimit.toCurrencyIDR()
         }
     }
 
@@ -106,7 +105,7 @@ class MonthlyLimitActivity : AppCompatActivity(), View.OnClickListener, DialogAl
         et_monthly_limit_others.setText(limitPreference.getLimit().others.toString())
 
         totalLimit = limitPreference.getLimit().total
-        tv_total_monthly_limit.text = totalLimit?.toCurrencyIDR()
+        tv_total_monthly_limit.text = totalLimit.toCurrencyIDR()
     }
 
     private fun updateLimit(id: Int, limitFood: Int, limitShop: Int, limitTravel: Int, limitOthers: Int, total: Int) {

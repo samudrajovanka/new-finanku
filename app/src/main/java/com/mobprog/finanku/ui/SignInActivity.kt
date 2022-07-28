@@ -24,6 +24,7 @@ import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
 
 class SignInActivity : AppCompatActivity(), View.OnClickListener {
     private val dialogLoading by lazy { DialogLoading() }
@@ -70,7 +71,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
                     et_sign_in_email.clearFocus()
                     et_sign_in_password.clearFocus()
 
-                    login(emailInput.toLowerCase(), passwordInput)
+                    login(emailInput.lowercase(Locale.getDefault()), passwordInput)
                 }
             }
             R.id.tv_to_sign_up -> {

@@ -17,13 +17,12 @@ import com.mobprog.finanku.preference.ExpensesPreference
 import com.mobprog.finanku.utils.CustomTextWatcher
 import com.mobprog.finanku.utils.onChangeRemoveError
 import com.mobprog.finanku.view.DialogLoading
-import kotlinx.android.synthetic.main.activity_password_setting.*
-import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
 
 class SignUpActivity : AppCompatActivity(), View.OnClickListener {
     private val dialogLoading by lazy { DialogLoading() }
@@ -132,7 +131,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                     val email = et_sign_up_email.text.toString()
                     val password = et_sign_up_password.text.toString()
 
-                    register(fullName, email.toLowerCase(), password)
+                    register(fullName, email.lowercase(Locale.getDefault()), password)
                 }
             }
             R.id.tv_to_sign_in -> {

@@ -11,7 +11,6 @@ import com.mobprog.finanku.data.Data
 import com.mobprog.finanku.preference.ExpensesPreference
 import com.mobprog.finanku.preference.LimitPreference
 import com.mobprog.finanku.utils.toCurrencyIDR
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_statistic.*
 import kotlinx.android.synthetic.main.layout_total_balance.*
 

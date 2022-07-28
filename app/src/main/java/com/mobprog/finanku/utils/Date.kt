@@ -1,16 +1,19 @@
 package com.mobprog.finanku.utils
 
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
 import java.util.*
 
 fun dateNow(): String {
-    return formatDate(Date())
+    val format = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+    return format.format(Date())
 }
 
-fun formatDate(date: Date): String {
-    val format = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
-    return format.format(date)
+fun formatDate(stringDate: String): String {
+    val baseFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
+    val outputFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+
+    val stringDatetoDate: Date? = baseFormat.parse(stringDate)
+    return outputFormat.format(stringDatetoDate ?: Date())
 }
 
 fun previousMonth(): String {

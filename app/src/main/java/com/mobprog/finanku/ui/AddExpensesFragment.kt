@@ -16,6 +16,7 @@ import androidx.annotation.RequiresApi
 import androidx.navigation.fragment.findNavController
 import com.mobprog.finanku.R
 import com.mobprog.finanku.data.*
+import com.mobprog.finanku.model.CategoryExpenses
 import com.mobprog.finanku.network.ApiConfig
 import com.mobprog.finanku.preference.AuthPreference
 import com.mobprog.finanku.preference.ExpensesPreference
@@ -144,10 +145,10 @@ class AddExpensesFragment : Fragment(), View.OnClickListener {
                     if (responseBody != null) {
                         val expensesPreference = context?.let { ExpensesPreference(it) }
                         when (category.category?.type) {
-                            "Food" -> expensesPreference?.addFood(amount)
-                            "Shop" -> expensesPreference?.addShop(amount)
-                            "Travel" -> expensesPreference?.addTravel(amount)
-                            "Others" -> expensesPreference?.addOthers(amount)
+                            CategoryExpenses.FOOD.type -> expensesPreference?.addFood(amount)
+                            CategoryExpenses.SHOP.type -> expensesPreference?.addShop(amount)
+                            CategoryExpenses.TRAVEL.type -> expensesPreference?.addTravel(amount)
+                            CategoryExpenses.OTHER.type -> expensesPreference?.addOthers(amount)
                         }
 
                         Toast.makeText(activity, "Successfully add expense money", Toast.LENGTH_SHORT)

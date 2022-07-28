@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.mobprog.finanku.R
-import com.mobprog.finanku.data.Data
 import com.mobprog.finanku.listener.DialogItemListener
 import com.mobprog.finanku.preference.AuthPreference
 import com.mobprog.finanku.preference.ExpensesPreference

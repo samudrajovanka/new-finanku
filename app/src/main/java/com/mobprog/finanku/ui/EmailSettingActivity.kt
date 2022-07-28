@@ -90,7 +90,7 @@ class EmailSettingActivity : AppCompatActivity(), View.OnClickListener {
                     til_email_setting.error = null
                     et_email_setting.clearFocus()
 
-                    updateEmail(et_email_setting.text.toString().toLowerCase())
+                    updateEmail(et_email_setting.text.toString().lowercase())
                 }
             }
         }

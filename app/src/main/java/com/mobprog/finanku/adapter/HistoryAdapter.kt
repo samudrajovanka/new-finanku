@@ -17,6 +17,7 @@ import kotlin.collections.ArrayList
 
 class HistoryAdapter(private val histories: ArrayList<ExpensesResponse>) :
     RecyclerView.Adapter<HistoryAdapter.HistoryHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_history, parent, false)
         return HistoryHolder(view)
@@ -35,17 +36,15 @@ class HistoryAdapter(private val histories: ArrayList<ExpensesResponse>) :
         private val ivIcon = view.iv_icon_item_history
 
         fun bindHistory(history: ExpensesResponse) {
-            val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-            val date: Date = format.parse(history.expenses.date)
-            tvDate.text = formatDate(date)
+            tvDate.text = formatDate(history.expenses.date)
             tvDescription.text = history.expenses.description
             tvAmount.text = history.expenses.amount.toCurrencyIDR()
 
             when (history.expenses.type.data.category?.type) {
-                "Food" -> ivIcon.setImageResource(R.drawable.ic_food)
-                "Shop" -> ivIcon.setImageResource(R.drawable.ic_shop)
-                "Travel" -> ivIcon.setImageResource(R.drawable.ic_travel)
-                "Others" -> ivIcon.setImageResource(R.drawable.ic_other)
+                CategoryExpenses.FOOD.type -> ivIcon.setImageResource(R.drawable.ic_food)
+                CategoryExpenses.SHOP.type -> ivIcon.setImageResource(R.drawable.ic_shop)
+                CategoryExpenses.TRAVEL.type -> ivIcon.setImageResource(R.drawable.ic_travel)
+                CategoryExpenses.OTHER.type -> ivIcon.setImageResource(R.drawable.ic_other)
             }
         }
     }

@@ -15,22 +15,22 @@ class StatisticLinearAdapter(private val statistics: ArrayList<Statistic>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): StatisticLinearAdapter.StatisticLinearHolder {
+    ): StatisticLinearHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_linear_statistic, parent, false)
-        return StatisticLinearAdapter.StatisticLinearHolder(view)
+        return StatisticLinearHolder(view)
     }
 
     override fun getItemCount(): Int = statistics.size
 
     override fun onBindViewHolder(
-        holder: StatisticLinearAdapter.StatisticLinearHolder,
+        holder: StatisticLinearHolder,
         position: Int
     ) {
         holder.bindHistory(statistics[position])
     }
 
-    class StatisticLinearHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class StatisticLinearHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val tvTitle = view.tv_item_title_statistic_linear
         private val pbPercentage = view.pb_item_statistic_linear
         private val context = view.context
