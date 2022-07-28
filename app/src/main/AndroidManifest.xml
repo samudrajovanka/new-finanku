@@ -16,32 +16,41 @@
         tools:targetApi="m">
         <activity
             android:name=".ui.MonthlyLimitActivity"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.PasswordSettingActivity"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.EmailSettingActivity"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.AccountSettingActivity"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.SetLimitActivity"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.SignUpActivity"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.SignInActivity"
+            android:exported="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
+            android:exported="true"
             android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
         <activity
             android:name=".ui.SplashScreenActivity"
             android:screenOrientation="portrait"
+            android:exported="true"
             android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
