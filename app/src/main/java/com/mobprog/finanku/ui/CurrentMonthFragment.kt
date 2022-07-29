@@ -8,14 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mobprog.finanku.R
 import com.mobprog.finanku.adapter.HistoryAdapter
-import com.mobprog.finanku.data.Data
 import com.mobprog.finanku.data.ExpensesGetResponse
-import com.mobprog.finanku.data.ExpensesPostResponse
 import com.mobprog.finanku.data.ExpensesResponse
 import com.mobprog.finanku.network.ApiConfig
 import com.mobprog.finanku.preference.AuthPreference
@@ -24,7 +21,6 @@ import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.time.LocalDateTime
 
 class CurrentMonthFragment : Fragment() {
     override fun onCreateView(

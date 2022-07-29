@@ -4,5 +4,5 @@ enum class CategoryExpenses(val type: String) {
     FOOD("Food"),
     SHOP("Shop"),
     TRAVEL("Travel"),
-    OTHER("Other")
+    OTHERS("Others")
 }

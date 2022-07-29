@@ -148,7 +148,7 @@ class AddExpensesFragment : Fragment(), View.OnClickListener {
                             CategoryExpenses.FOOD.type -> expensesPreference?.addFood(amount)
                             CategoryExpenses.SHOP.type -> expensesPreference?.addShop(amount)
                             CategoryExpenses.TRAVEL.type -> expensesPreference?.addTravel(amount)
-                            CategoryExpenses.OTHER.type -> expensesPreference?.addOthers(amount)
+                            CategoryExpenses.OTHERS.type -> expensesPreference?.addOthers(amount)
                         }
 
                         Toast.makeText(activity, "Successfully add expense money", Toast.LENGTH_SHORT)

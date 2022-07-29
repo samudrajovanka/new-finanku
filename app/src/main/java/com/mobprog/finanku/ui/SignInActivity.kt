@@ -18,7 +18,6 @@ import com.mobprog.finanku.preference.ExpensesPreference
 import com.mobprog.finanku.preference.LimitPreference
 import com.mobprog.finanku.utils.onChangeRemoveError
 import com.mobprog.finanku.view.DialogLoading
-import com.mobprog.finanku.view.DialogPromptFragment
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import org.json.JSONObject
 import retrofit2.Call

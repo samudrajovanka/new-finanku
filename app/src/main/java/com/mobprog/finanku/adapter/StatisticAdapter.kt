@@ -50,7 +50,7 @@ class StatisticAdapter(var context: Context, var arrayList: ArrayList<Statistic>
             CategoryExpenses.FOOD -> convertView?.iv_category_item_statistic?.setImageResource(R.drawable.ic_food)
             CategoryExpenses.SHOP -> convertView?.iv_category_item_statistic?.setImageResource(R.drawable.ic_shop)
             CategoryExpenses.TRAVEL -> convertView?.iv_category_item_statistic?.setImageResource(R.drawable.ic_travel)
-            CategoryExpenses.OTHER -> convertView?.iv_category_item_statistic?.setImageResource(R.drawable.ic_others)
+            CategoryExpenses.OTHERS -> convertView?.iv_category_item_statistic?.setImageResource(R.drawable.ic_others)
         }
 
         when {

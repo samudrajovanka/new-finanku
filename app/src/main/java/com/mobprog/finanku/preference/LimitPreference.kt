@@ -16,13 +16,13 @@ internal class LimitPreference(context: Context) {
 
     private val preferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
-    fun setLimit(id: Int, food: Int, shop: Int, travel: Int, others: Int, total: Int) {
+    fun setLimit(id: Int, food: Int, shop: Int, travel: Int, other: Int, total: Int) {
         val editor = preferences.edit()
         editor.putInt(ID, id)
         editor.putInt(FOOD, food)
         editor.putInt(SHOP, shop)
         editor.putInt(TRAVEL, travel)
-        editor.putInt(OTHERS, others)
+        editor.putInt(OTHERS, other)
         editor.putInt(TOTAL, total)
 
         editor.apply()

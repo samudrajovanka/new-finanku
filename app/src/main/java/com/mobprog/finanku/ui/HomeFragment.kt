@@ -24,7 +24,6 @@ import com.mobprog.finanku.preference.LimitPreference
 import com.mobprog.finanku.utils.OffsetDecoration
 import com.mobprog.finanku.utils.dateNow
 import com.mobprog.finanku.utils.toCurrencyIDR
-import kotlinx.android.synthetic.main.fragment_current_month.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.item_time_now_active.*
 import kotlinx.android.synthetic.main.layout_total_balance.*

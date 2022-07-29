@@ -1,7 +1,6 @@
 package com.mobprog.finanku.preference
 
 import android.content.Context
-import com.mobprog.finanku.data.Limit
 
 internal class ExpensesPreference(context: Context) {
     companion object {

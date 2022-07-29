@@ -6,12 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mobprog.finanku.R
 import com.mobprog.finanku.data.ExpensesResponse
-import com.mobprog.finanku.model.History
 import com.mobprog.finanku.model.CategoryExpenses
 import com.mobprog.finanku.utils.formatDate
 import com.mobprog.finanku.utils.toCurrencyIDR
 import kotlinx.android.synthetic.main.item_history.view.*
-import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -44,7 +42,7 @@ class HistoryAdapter(private val histories: ArrayList<ExpensesResponse>) :
                 CategoryExpenses.FOOD.type -> ivIcon.setImageResource(R.drawable.ic_food)
                 CategoryExpenses.SHOP.type -> ivIcon.setImageResource(R.drawable.ic_shop)
                 CategoryExpenses.TRAVEL.type -> ivIcon.setImageResource(R.drawable.ic_travel)
-                CategoryExpenses.OTHER.type -> ivIcon.setImageResource(R.drawable.ic_other)
+                CategoryExpenses.OTHERS.type -> ivIcon.setImageResource(R.drawable.ic_other)
             }
         }
     }
